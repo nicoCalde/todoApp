@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="title">Lista de Tareas</h1>
+
+    <div class="allTasks">
+        <h2 class="taskListTitle">Mis Listas</h2>
+        <ul class="taskList" data-lists></ul>
+        <form action="" data-new-list-form>
+            <input type="text" class="new list" placeholder="Nueva Lista" aria-label="nueva lista" data-new-list-input>
+            <button class="btn create" aria-label="crear nueva lista">+</button>
+        </form>
+    </div>
+
+    <div class="todoList" data-list-display-container>
+        <div class="todoHeader">
+            <h2 class="listTitle" data-list-title>Tareas</h2>
+            <p class="taskCount" data-list-count>3 tareas pendientes</p>
+        </div>
+        <div class="todoBody">
+            <div class="tasks" data-tasks></div>
+            <div class="newTaskCreator">
+                <form action="" data-new-task-form>
+                    <input type="text" data-new-task-input class="new task" placeholder="Nueva Tarea" aria-label="nueva tarea">
+                    <button class="btn create" aria-label="crear nueva tarea">+</button>
+                </form>
+            </div>
+            <div class="deleteStuff">
+                <button class="btn delete" data-clear-complete-tasks-button>Borrar tareas completadas</button>
+                <button class="btn delete" data-delete-list-button>Eliminar lista</button>
+            </div>
+        </div>
+    </div>
+
+    <template id="taskTemplate">
+        <div class="task">
+            <input type="checkbox" />
+            <label>
+                <span class="customCheckbox"></span>
+            </label>
+        </div>
+    </template>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
