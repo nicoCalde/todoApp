@@ -243,10 +243,12 @@ form{
 @media screen and (max-width:768px){
     body{
         margin: 0;
+        padding: 0;
         font-weight: 300;
         font-size: 1.5rem;
         display: grid;
-        grid: "header" auto "lists" auto "active" auto / 100%;
+        grid: "header" auto "lists" auto "active" auto;
+        gap: 0;
     }
 
     .title{
@@ -257,7 +259,7 @@ form{
 
     .allTasks{
         grid-area: lists;
-        margin: 0 5px 25px 5px;
+        padding: 0 2% 25px 2%;
     }
 
     .todoList{
@@ -265,15 +267,24 @@ form{
     }
 
     .todoHeader{
-        padding: 25px 5px;
+        justify-content: space-between;
+        padding: 25px 2%;
+    }
+
+    .listTitle{
+        padding: 0;
     }
 
     .todoBody{
-        padding: 20px 6px;
+        padding: 20px 2%;
     }
 
     .task{
         margin-bottom: 0;
+    }
+
+    .btn.delete{
+        margin-bottom: 10px;
     }
 
 }
