@@ -279,17 +279,13 @@ form{
     }
 
     .todoBody{ 
-        padding: 20px 2%;
+        padding-left: 2%;
+        padding-right: 2%;
         margin: 0;
     }
 
     .listTitle{
         padding: 0;
-        margin: 0;
-    }
-
-    .task{
-        margin-bottom: 0;
         margin: 0;
     }
 
